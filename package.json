@@ -1,0 +1,27 @@
+{
+  "name": "yidu864-blog",
+  "version": "1.0.0",
+  "description": "yidu864's blog base on vuepress",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs --clean-cache",
+    "build": "vuepress build docs --clean-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yidu864/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "yidu864",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yidu864/blog/issues"
+  },
+  "homepage": "https://github.com/yidu864/blog#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.36",
+    "vuepress-theme-gungnir": "^2.0.0-alpha.17"
+  }
+}
