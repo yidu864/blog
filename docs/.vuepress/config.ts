@@ -4,7 +4,7 @@ import { navbar } from './configs'
 
 const isProd = process.env.NODE_ENV === 'production'
 
-const repo = 'yidu864/blog'
+const fullyear = new Date().getFullYear()
 
 export default defineUserConfig<GungnirThemeOptions>({
   // 站点配置
@@ -12,10 +12,43 @@ export default defineUserConfig<GungnirThemeOptions>({
   title: "yidu864's log",
   description: "yidu864's log",
 
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: `/imgs/logo/favicon-16x16.png`,
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: `/imgs/logo/favicon-32x32.png`,
+      },
+    ],
+    ['meta', { name: 'application-name', content: 'Xiaohan Zou' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Xiaohan Zou' }],
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+    ],
+    [
+      'link',
+      { rel: 'apple-touch-icon', href: `/images/icons/apple-touch-icon.png` },
+    ],
+    ['meta', { name: 'theme-color', content: '#377bb5' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#377bb5' }],
+  ],
+
   // 主题和它的配置
   theme: 'gungnir',
   themeConfig: {
-    repo,
+    repo: 'yidu864/blog',
     docsDir: 'docs',
     docsBranch: 'main',
 
@@ -102,19 +135,23 @@ export default defineUserConfig<GungnirThemeOptions>({
       // },
     },
     footer: `
-      &copy; <a href="https://github.com/yidu864" target="_blank">yidu864</a> 2022
+      &copy; <a href="https://github.com/yidu864" target="_blank">yidu864</a> ${
+        fullyear === 2022 ? '' : '2022 -'
+      } ${fullyear}
       <br>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `,
-    markdown: {
-      extractHeaders: {
-        level: [2, 3, 4, 5],
-      },
-      code: {
-        lineNumbers: false,
-      },
+  },
+
+  plugins: [['vuepress-plugin-chart'], ['@renovamen/vuepress-plugin-mermaid']],
+
+  markdown: {
+    extractHeaders: {
+      level: [2, 3, 4, 5],
+    },
+    code: {
+      lineNumbers: false,
     },
   },
-  plugins: [['vuepress-plugin-chart'], ['@renovamen/vuepress-plugin-mermaid']],
 })
