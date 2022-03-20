@@ -2,21 +2,17 @@
 layout: Links
 title: Links
 links:
-  - title: Live Demos
+  # - title: 有收藏价值
+  #   items:
+  #     - sitename: Github
+  #       url: https://vuepress-theme-gungnir.vercel.app
+  #       img: /imgs/links/v1.svg
+  #       desc: VuePress 1 theme
+
+  - title: 鸣谢
     items:
-      - sitename: ME?
+      - sitename: Renovamen
         url: https://zxh.io
-        img: /imgs/links/me.png
-        desc: My blog
-        
-  - title: Other Versions
-    items:
-      - sitename: VuePress 1
-        url: https://vuepress-theme-gungnir.vercel.app
-        img: /imgs/links/v1.svg
-        desc: VuePress 1 theme
-      - sitename: Jekyll
-        url: https://jekyll-theme-gungnir.vercel.app
-        img: /imgs/links/jekyll.png
-        desc: Jekyll theme
+        img: https://zxh.io/img/avatar.jpg
+        desc: vuepress theme Gungnir 作者
 ---
