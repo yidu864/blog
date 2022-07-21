@@ -122,7 +122,7 @@ export default defineUserConfig<GungnirThemeOptions>({
         repoId: 'R_kgDOHBjyCQ',
         category: 'Announcements',
         categoryId: 'DIC_kwDOHBjyCc4COKZm',
-        darkTheme: 'https://zxh.io/styles/giscus-dark.css',
+        darkTheme: 'http://yidu864.github.io/style/giscus-dark.css',
       },
       mdPlus: {
         all: true,
