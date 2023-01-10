@@ -22,6 +22,6 @@
   "homepage": "https://github.com/yidu864/blog#readme",
   "devDependencies": {
     "vuepress": "^2.0.0-beta.36",
-    "vuepress-theme-gungnir": "^2.0.0-alpha.17"
+    "vuepress-theme-gungnir": "^2.0.0-alpha.26"
   }
 }
