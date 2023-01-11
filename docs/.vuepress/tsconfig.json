@@ -3,7 +3,6 @@
     "*.ts",
     "*.vue",
     "*.tsx",
-    "clientAppEnhance.ts",
   ],
   "exclude": [
     "node_modules"

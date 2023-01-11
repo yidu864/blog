@@ -1,12 +1,12 @@
-import { defineUserConfig } from 'vuepress'
-import type { GungnirThemeOptions } from 'vuepress-theme-gungnir'
+import { defineUserConfig, viteBundler } from 'vuepress'
+import { gungnirTheme } from 'vuepress-theme-gungnir'
 import { navbar } from './configs'
 
 const isProd = process.env.NODE_ENV === 'production'
 
 const fullyear = new Date().getFullYear()
 
-export default defineUserConfig<GungnirThemeOptions>({
+export default defineUserConfig({
   // 站点配置
   lang: 'zh-CN',
   title: "yidu864's log",
@@ -45,12 +45,15 @@ export default defineUserConfig<GungnirThemeOptions>({
     ['meta', { name: 'msapplication-TileColor', content: '#377bb5' }],
   ],
 
+  bundler: viteBundler(),
+
   // 主题和它的配置
-  theme: 'gungnir',
-  themeConfig: {
-    repo: 'yidu864/blog',
+  theme: gungnirTheme({
+    repo: 'yidu864/yidu864.github.io',
     docsDir: 'docs',
     docsBranch: 'main',
+
+    hitokoto: 'https://v1.hitokoto.cn?c=i', // enable hitokoto (一言) or not?
 
     personalInfo: {
       // 必须：名称，将在首页、移动端侧边栏和文章作者信息处显示
@@ -58,7 +61,7 @@ export default defineUserConfig<GungnirThemeOptions>({
       avatar: '/imgs/avatar.jpg',
 
       // 必须：个人简介，将在首页显示
-      description: 'a simple coder',
+      description: 'on learning...',
 
       // 可选：社交平台账号，将在首页和移动端侧边栏显示
       sns: {
@@ -91,11 +94,6 @@ export default defineUserConfig<GungnirThemeOptions>({
         mask: 'rgb(251, 170, 152, .2)',
       },
     ],
-    locales: {
-      '/': {
-        navbar: navbar.zh,
-      },
-    },
     pages: {
       tags: {
         subtitle: 'Black Sheep Wall',
@@ -113,6 +111,7 @@ export default defineUserConfig<GungnirThemeOptions>({
         },
       },
     },
+    navbar: navbar.zh,
     themePlugins: {
       // only enable git plugin in production mode
       git: isProd,
@@ -142,12 +141,15 @@ export default defineUserConfig<GungnirThemeOptions>({
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `,
-  },
-
-  plugins: [['vuepress-plugin-chart'], ['@renovamen/vuepress-plugin-mermaid']],
+    locales: {
+      '/': {
+        navbar: navbar.zh,
+      },
+    },
+  }),
 
   markdown: {
-    extractHeaders: {
+    headers: {
       level: [2, 3, 4, 5],
     },
     code: {

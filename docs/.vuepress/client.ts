@@ -1,4 +1,4 @@
-import { defineClientAppEnhance } from '@vuepress/client'
+import { defineClientConfig } from '@vuepress/client'
 import { addIcons } from 'oh-vue-icons'
 import {
   FaFortAwesome,
@@ -16,7 +16,6 @@ import {
   AiCv,
   AiGoogleScholarSquare,
 } from 'oh-vue-icons/icons'
-import About from './components/about.vue'
 
 addIcons(
   FaFortAwesome,
@@ -35,6 +34,4 @@ addIcons(
   AiGoogleScholarSquare
 )
 
-export default defineClientAppEnhance(({ app }) => {
-  app.component('About', About)
-})
+export default defineClientConfig({})
