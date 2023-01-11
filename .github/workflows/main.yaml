@@ -4,8 +4,8 @@ on:
   # 每当 push 到 main 分支时触发部署
   push:
     branches: [main]
-  # 手动触发部署
-  workflow_dispatch:
+  pull_request:
+    branches: [main]
 
 jobs:
   auto-deploy:
@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           # 选择要使用的 node 版本
-          node-version: ${{ evn.NODE_VERSION }}
+          node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
 
       # 如果缓存没有命中，安装依赖
