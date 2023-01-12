@@ -81,24 +81,23 @@ export default defineUserConfig({
       },
     },
     homeHeaderImages: [
-      {
-        path: '/imgs/home-bg/1.jpg',
-        mask: 'rgba(40, 57, 101, .4)',
-      },
-      {
-        path: '/imgs/home-bg/2.jpg',
+      'https://iili.io/HYxX50l.png',
+      'https://iili.io/HYxXusf.png',
+      'https://iili.io/HYxXIxs.png',
+      'https://iili.io/HYxXxbn.png',
+      'https://iili.io/HYxXoOX.png',
+      'https://iili.io/HYxXnRt.png',
+    ]
+      .map((v) => ({
+        path: v,
         mask: 'rgb(251, 170, 152, .2)',
-      },
-      {
-        path: '/imgs/home-bg/3.jpg',
-        mask: 'rgb(251, 170, 152, .2)',
-      },
-    ],
+      }))
+      .reverse(),
     pages: {
       tags: {
         subtitle: 'Black Sheep Wall',
         bgImage: {
-          path: '/imgs/pages/tags.jpg',
+          path: 'https://iili.io/HYxX2WJ.png',
           mask: 'rgba(211, 136, 37, .5)',
         },
       },
@@ -106,7 +105,7 @@ export default defineUserConfig({
         subtitle:
           'When you are looking at the stars, please put the brightest star shining night sky as my soul.',
         bgImage: {
-          path: '/imgs/pages/links.jpg',
+          path: 'https://iili.io/HYxX3iv.png',
           mask: 'rgba(64, 118, 190, 0.5)',
         },
       },
