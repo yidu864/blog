@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2e850a78","path":"/tags/chrome/","title":"chrome | Tags","lang":"zh-CN","frontmatter":{"title":"chrome | Tags","layout":"Tags","blog":{"type":"category","name":"chrome","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};
