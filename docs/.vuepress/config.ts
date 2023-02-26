@@ -1,4 +1,5 @@
-import { defineUserConfig, viteBundler } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defineUserConfig } from 'vuepress'
 import { gungnirTheme } from 'vuepress-theme-gungnir'
 import { navbar } from './configs'
 
@@ -125,6 +126,8 @@ export default defineUserConfig({
       mdPlus: {
         all: true,
       },
+      chartjs: true,
+      mermaid: true,
       // ga: 'G-HCQSX53XFG',
       // ba: '75381d210789d3eaf855fa16246860cc',
       // rss: {
