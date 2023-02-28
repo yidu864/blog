@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NODE_VERSION: '16'
+      NODE_VERSION: '18.12.1'
 
     steps:
       - uses: actions/checkout@v3
@@ -35,6 +35,11 @@ jobs:
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
+
+      # 临时加大可用内存
+      - name: Increse Mem
+        run: pnpm i increase-memory-limt
+        run: cross-env LIMIT=2048 increase-memory-limit
 
       # 运行构建脚本
       - name: Build site
