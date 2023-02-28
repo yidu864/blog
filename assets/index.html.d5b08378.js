@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-08826e2e","path":"/tags/regular-expression/","title":"regular expression | Tags","lang":"zh-CN","frontmatter":{"title":"regular expression | Tags","layout":"Tags","blog":{"type":"category","name":"regular expression","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};

@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-40e9baf7","path":"/tags/%E6%9D%82%E9%A1%B9/","title":"\u6742\u9879 | Tags","lang":"zh-CN","frontmatter":{"title":"\u6742\u9879 | Tags","layout":"Tags","blog":{"type":"category","name":"\u6742\u9879","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{t as data};
