@@ -36,9 +36,13 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
+      # 临时加大可用内存
+      - name: Increse Mem
+        run: pnpm i increase-memory-limit && npx cross-env LIMIT=4096 increase-memory-limit
+
       # 运行构建脚本
       - name: Build site
-        run: pnpm build --max_old_space_size=4096
+        run: pnpm build
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
