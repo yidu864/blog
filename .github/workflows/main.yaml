@@ -37,7 +37,7 @@ jobs:
         run: pnpm i --frozen-lockfile
 
       # 临时加大可用内存
-      - name: Increse Mem
+      - name: Increase Mem
         run: pnpm i increase-memory-limit && npx cross-env LIMIT=4096 increase-memory-limit
 
       # 运行构建脚本
